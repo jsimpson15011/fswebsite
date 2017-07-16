@@ -807,6 +807,7 @@ position: absolute;
 	height: 130px;
 }
 .month-name{
+	display: none;
 	float: left;
 }
 .month{
@@ -851,26 +852,27 @@ position: absolute;
 	position: relative;
 	z-index: 1;
 	float: left;
+	margin-top: 5px;
 	margin-right: 20px;
-	width: 50px;
-	height: 100%;
-	opacity: 1;
-	background-color: white;
-}
-#left-arrow-cal{
-  width: 0; 
-  height: 0; 
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent; 
-  
-  border-right:10px solid blue;
+ 	width: 0; 
+  	height: 0; 
+  	border-top: 60px solid transparent;
+  	border-bottom: 60px solid transparent; 
+	border-right:30px solid white;
+	background-color: none;
+	opacity: .3;
 }
 
 #next-month{
 	position: relative;
-	float: right;
 	z-index: 1;
-	width: 50px;
-	height: 100%;
-	background-color: blue;
+	float: right;
+	margin-top: 5px;
+ 	width: 0; 
+  	height: 0; 
+  	border-top: 60px solid transparent;
+  	border-bottom: 60px solid transparent; 
+	border-left:30px solid white;
+	background-color: none;
+	opacity: .3;
 }
