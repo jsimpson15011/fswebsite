@@ -55,16 +55,17 @@ for (var i = 0; i < square.length; i++) {
 }
 function enlargeImg(){
 	this.classList.remove("hole-info-img");
-	this.className += "closeImg ";
+	this.className += "closeImg";
 	for (var i = 0; i < closeImg.length; i++) {
     closeImg[i].addEventListener('click', shrinkImg, false);
 	}
+	this.removeEventListener('click', enlargeImg, false);
 }
 
 
 function shrinkImg(){
-	this.className += "hole-info-img ";
 	this.classList.remove("closeImg");
+	this.className += "hole-info-img ";
 	for (var i = 0; i < holeImg.length; i++) {
     holeImg[i].addEventListener('click', enlargeImg, false);
 	}
