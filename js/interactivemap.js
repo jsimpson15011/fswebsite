@@ -42,7 +42,7 @@ function closeInfo(){
     removeInfo[i].style.display="none"
 	}
 	for (var i = 0; i < closeImg.length; i++){
-		closeImg[i].className += "hole-info-img";
+		closeImg[i].classList.add("hole-info-img");
 		closeImg[i].classList.remove("closeImg");
 		for (var i = 0; i < holeImg.length; i++) {
     	holeImg[i].addEventListener('click', enlargeImg, false);
@@ -55,7 +55,7 @@ for (var i = 0; i < square.length; i++) {
 }
 function enlargeImg(){
 	this.classList.remove("hole-info-img");
-	this.className += "closeImg";
+	this.classList.add("closeImg");
 	for (var i = 0; i < closeImg.length; i++) {
     closeImg[i].addEventListener('click', shrinkImg, false);
 	}
@@ -77,7 +77,6 @@ for (var i = 0; i < square.length; i++) {
 }
 function displayInfo(){
 	for (var i = 0; i < closeImg.length; i++){
-		closeImg[i].className += "hole-info-img ";
 		closeImg[i].classList.remove("closeImg");
 		for (var i = 0; i < holeImg.length; i++) {
     	holeImg[i].addEventListener('click', enlargeImg, false);
