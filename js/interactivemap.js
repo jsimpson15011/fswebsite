@@ -64,8 +64,7 @@ function enlargeImg(){
 
 
 function shrinkImg(){
-	this.classList.remove("closeImg");
-	this.className += "hole-info-img ";
+	this.className = "hole-info-img ";
 	for (var i = 0; i < holeImg.length; i++) {
     holeImg[i].addEventListener('click', enlargeImg, false);
 	}
@@ -77,7 +76,7 @@ for (var i = 0; i < square.length; i++) {
 }
 function displayInfo(){
 	for (var i = 0; i < closeImg.length; i++){
-		closeImg[i].classList.remove("closeImg");
+		closeImg[i].className = "hole-info-img";
 		for (var i = 0; i < holeImg.length; i++) {
     	holeImg[i].addEventListener('click', enlargeImg, false);
 		}
