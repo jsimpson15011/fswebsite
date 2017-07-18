@@ -42,7 +42,7 @@ function closeInfo(){
     removeInfo[i].style.display="none"
 	}
 	for (var i = 0; i < closeImg.length; i++){
-		closeImg[i].className += "hole-info-img ";
+		closeImg[i].className += "hole-info-img";
 		closeImg[i].classList.remove("closeImg");
 		for (var i = 0; i < holeImg.length; i++) {
     	holeImg[i].addEventListener('click', enlargeImg, false);
