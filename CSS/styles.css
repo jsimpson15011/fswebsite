@@ -695,7 +695,8 @@ img[class='interaction-icon']{
 table.hole-info-table{
 	color: black;
 	background-color: white;
-	margin-left: 10px;
+	margin-left: auto;
+	margin-right: auto;
 	margin-top: 10px;
 	border-collapse: collapse;
 }
