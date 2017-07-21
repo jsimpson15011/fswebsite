@@ -222,3 +222,4 @@ document.getElementById('hole-info').onmousedown = function () {
 
 document.onmousemove = _move_elem;
 document.onmouseup = _destroy;
+
