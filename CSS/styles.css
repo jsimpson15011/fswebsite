@@ -50,6 +50,9 @@ h2.info-wordbox:link{
 
 @media only screen and (min-width: 1024px){
 /*for desktops*/
+	.mobile-tip{
+	display: none;
+	}
 	.nav {
 	position: absolute;
 	top: 150px;
@@ -136,6 +139,9 @@ h2.info-wordbox:link{
 
 @media only screen and (max-width: 1024px){
 /*for mobile*/
+	.mobile-tip{
+		display: block;
+	}
 	li.centerbuttons{
 	margin-left: -0px;
 	}
@@ -642,9 +648,8 @@ label {
 	border: dotted white;
 }
 
-.interaction-square{
+.interaction-square,.interaction-square-dummy{
 	position: absolute;
-	display: block;
 	z-index: 1;
 	width: 25px;
 	height: 25px;
@@ -655,7 +660,19 @@ label {
   	cursor: pointer;
 }
 
+#example{
+	display: inline-block;
+	margin-left: 10px;
+	opacity: 1;
+	cursor: default;
+}
+
 img[class='interaction-icon']{
+	margin-top: 8px;
+	width: 100%;
+}
+
+img[class='interaction-icon-dummy']{
 	margin-top: 8px;
 	width: 100%;
 }
