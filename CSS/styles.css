@@ -129,6 +129,9 @@ h2.info-wordbox:link{
 	.closeImg:hover{
 	cursor: pointer;
 	}
+	.month-label{
+		margin-top: 200px;
+	}
 }
 
 @media only screen and (max-width: 1024px){
@@ -221,6 +224,14 @@ h2.info-wordbox:link{
 
 	.closeImg:hover{
 	cursor: pointer;
+	}
+	.month{
+	position: relative;
+	}
+	.month-label{
+	top: 0px;
+	margin-top: 300px;
+	max-width: 100%;
 	}
 }
 
@@ -797,7 +808,8 @@ position: absolute;
 }
 .month-label{
 	position: relative;
-	margin-top: 200px;
+	z-index: 1;
+	top: 0px;
 	font-size: 80px;
 	line-height: 130px;
 	font-family: georgia;
@@ -814,10 +826,10 @@ position: absolute;
 }
 .month{
 	display: none;
-	position: absolute;
+	position: relative;
+	float: left;
 	margin-left: auto;
 	margin-right: auto;
-	top: 340px;
 	width: 1200px;
 }
 
