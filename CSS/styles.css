@@ -871,6 +871,14 @@ position: absolute;
 	float: left;
 }
 
+.cal-void{
+	width: 160px;
+	height: 150px;
+	background-color: grey;
+	border: 2px solid black;
+	float: left;
+}
+
 .day{
 	width: 100%;
 	height: 20px;

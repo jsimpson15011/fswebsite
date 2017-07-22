@@ -1,5 +1,22 @@
 var date = new Date();
 var month = date.getMonth();
+var monthContainer = document.getElementsByClassName('month');
+var next = document.getElementById('next-month');
+var prev = document.getElementById('prev-month');
+function createBlankBox(){
+	var calBox = document.createElement('div');
+	var blankBox = calBox.classList.add('cal-void');
+}
+addBoxToCal();
+function addBoxToCal(){
+createBlankBox();
+//document.monthContainer[6].insertBefore(blankBox, monthContainer.firstChild);
+document.body.appendChild();
+}
+
+
+next.addEventListener('click',showNextMonth,false);
+prev.addEventListener('click',showPrevMonth,false);
 showMonth();
 function showMonth() { //Shows the Current Month
 	var monthLabel = document.getElementsByClassName('month-name');
@@ -55,12 +72,6 @@ function showMonth() { //Shows the Current Month
 		break;													
 	}
 };
-
-var next = document.getElementById('next-month');
-var prev = document.getElementById('prev-month');
-next.addEventListener('click',showNextMonth,false);
-prev.addEventListener('click',showPrevMonth,false);
-
 function showNextMonth(){
 	month+=1;
 	if(month>10){
