@@ -3,17 +3,66 @@ var month = date.getMonth();
 var monthContainer = document.getElementsByClassName('month');
 var next = document.getElementById('next-month');
 var prev = document.getElementById('prev-month');
-function createBlankBox(){
-	var calBox = document.createElement('div');
-	var blankBox = calBox.classList.add('cal-void');
+var dateCalcArray = [dateCalcWithLeap(6),dateCalcWithLeap(2),dateCalc(3),dateCalc(6),dateCalc(1),dateCalc(4),dateCalc(6),dateCalc(2),dateCalc(5),dateCalc(0),dateCalc(3),dateCalc(5)];
+
+for (var i = 0; i<dateCalcArray[0]; i++) {
+	createBlankBox(0);
 }
-addBoxToCal();
-function addBoxToCal(){
-createBlankBox();
-//document.monthContainer[6].insertBefore(blankBox, monthContainer.firstChild);
-document.body.appendChild();
+for (var i = 0; i<dateCalcArray[1]; i++) {
+	createBlankBox(1);
+}
+for (var i = 0; i<dateCalcArray[2]; i++) {
+	createBlankBox(2);
+}
+for (var i = 0; i<dateCalcArray[3]; i++) {
+	createBlankBox(3);
+}
+for (var i = 0; i<dateCalcArray[4]; i++) {
+	createBlankBox(4);
+}
+for (var i = 0; i<dateCalcArray[5]; i++) {
+	createBlankBox(5);
+}
+for (var i = 0; i<dateCalcArray[6]; i++) {
+	createBlankBox(6);
+}
+for (var i = 0; i<dateCalcArray[7]; i++) {
+	createBlankBox(7);
+}
+for (var i = 0; i<dateCalcArray[8]; i++) {
+	createBlankBox(8);
+}
+for (var i = 0; i<dateCalcArray[9]; i++) {
+	createBlankBox(9);
+}
+for (var i = 0; i<dateCalcArray[10]; i++) {
+	createBlankBox(10);
+}
+for (var i = 0; i<dateCalcArray[11]; i++) {
+	createBlankBox(11);
 }
 
+function dateCalc(n){//Calculates how many date boxes need to be added to beggining of month
+	var year = date.getFullYear();
+	var calc = n+(year-2017);
+	if(calc>6){
+		calc-=7;
+	}
+	return calc;
+}
+function dateCalcWithLeap(n){//Calculates how many date boxes need to be added to beggining of month
+	var year = date.getFullYear();
+	var calc = (n+1)+(year-2017);
+	if(calc>6){
+		calc -=7 ;
+	}
+	return calc;
+}
+function createBlankBox(m){
+	var calBox = document.createElement('DIV');
+	calBox.classList.add('cal-void');
+	monthContainer[m].insertBefore(calBox, monthContainer[m].children[7]);
+}
 
 next.addEventListener('click',showNextMonth,false);
 prev.addEventListener('click',showPrevMonth,false);
@@ -27,8 +76,13 @@ function showMonth() { //Shows the Current Month
 			dayBoxes[0].style.display='block';
 		break;
 		case 1:
+			var year = date.getFullYear();
 			monthLabel[1].style.display='block';
 			dayBoxes[1].style.display='block';
+			if (year%4==0) {
+				var leapDay = document.getElementById('leap-day');
+				leapDay.style.display='block';
+			}
 		break;		
 		case 2:
 			monthLabel[2].style.display='block';
