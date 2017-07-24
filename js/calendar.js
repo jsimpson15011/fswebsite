@@ -5,9 +5,6 @@ var next = document.getElementById('next-month');
 var prev = document.getElementById('prev-month');
 var dateCalcArray = [dateCalcWithLeap(6),dateCalcWithLeap(2),dateCalc(3),dateCalc(6),dateCalc(1),dateCalc(4),dateCalc(6),dateCalc(2),dateCalc(5),dateCalc(0),dateCalc(3),dateCalc(5)];
 
-for (var i = 0; i<dateCalcArray[0]; i++) {
-	createBlankBox(0);
-}
 for (var i = 0; i<dateCalcArray[1]; i++) {
 	createBlankBox(1);
 }
@@ -72,12 +69,15 @@ function showMonth() { //Shows the Current Month
 	var dayBoxes = document.getElementsByClassName('month');
 	switch (month) {
 		case 0:
-			monthLabel[0].style.display='block';
+			for (var i = 0; i<dateCalcArray[0]; i++) {
+			createBlankBox(0);
+			}
+			$(monthLabel[0]).fadeIn(500);
 			dayBoxes[0].style.display='block';
 		break;
 		case 1:
 			var year = date.getFullYear();
-			monthLabel[1].style.display='block';
+			$(monthLabel[1]).fadeIn(500);
 			dayBoxes[1].style.display='block';
 			if (year%4==0) {
 				var leapDay = document.getElementById('leap-day');
@@ -85,43 +85,43 @@ function showMonth() { //Shows the Current Month
 			}
 		break;		
 		case 2:
-			monthLabel[2].style.display='block';
+			$(monthLabel[2]).fadeIn(500);
 			dayBoxes[2].style.display='block';
 		break;		
 		case 3:
-			monthLabel[3].style.display='block';
+			$(monthLabel[3]).fadeIn(500);
 			dayBoxes[3].style.display='block';
 		break;		
 		case 4:
-			monthLabel[4].style.display='block';
+			$(monthLabel[4]).fadeIn(500);
 			dayBoxes[4].style.display='block';
 		break;		
 		case 5:
-			monthLabel[5].style.display='block';
+			$(monthLabel[5]).fadeIn(500);
 			dayBoxes[5].style.display='block';
 		break;
 		case 6:
-			monthLabel[6].style.display='block';
+			$(monthLabel[6]).fadeIn(500);
 			dayBoxes[6].style.display='block';
 		break;
 		case 7:
-			monthLabel[7].style.display='block';
+			$(monthLabel[7]).fadeIn(500);
 			dayBoxes[7].style.display='block';
 		break;
 		case 8:
-			monthLabel[8].style.display='block';
+			$(monthLabel[8]).fadeIn(500);
 			dayBoxes[8].style.display='block';
 		break;
 		case 9:
-			monthLabel[9].style.display='block';
+			$(monthLabel[9]).fadeIn(500);
 			dayBoxes[9].style.display='block';
 		break;
 		case 10:
-			monthLabel[10].style.display='block';
+			$(monthLabel[10]).fadeIn(500);
 			dayBoxes[10].style.display='block';
 		break;
 		case 11:
-			monthLabel[11].style.display='block';
+			$(monthLabel[11]).fadeIn(500);
 			dayBoxes[11].style.display='block';
 		break;													
 	}
