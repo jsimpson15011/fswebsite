@@ -4,7 +4,24 @@ var timer = setInterval(forward, 6000);
 var leftBox = document.getElementsByClassName('box-left')[0];
 var whiteBox = document.getElementById("whitebox");
 
-
+addSlidesToPage(2);
+addSlidesToPage(3);
+function addSlidesToPage(n){
+	var slideShowBox = document.getElementById('whitebox');
+	var newSlide = document.createElement('DIV');
+	var newImg = document.createElement('IMG');
+	var mySlides=document.getElementsByClassName('mySlides');
+	var newDot= document.createElement('DIV');
+	var number=n;
+	var imgSrc='images/'+number+'.jpg';
+	newDot.classList.add('dot');
+	newSlide.classList.add('mySlides');
+	newImg.src=imgSrc;
+	document.body.appendChild(newSlide);
+	slideShowBox.insertBefore(newSlide, slideShowBox.children[2]);
+	slideShowBox.insertBefore(newDot, slideShowBox.lastChild);
+	mySlides[0].insertBefore(newImg, mySlides[0].firstChild);
+}
 
 var rightBox = document.getElementsByClassName('box-right')[0];
 rightBox.onclick = plusSlides;

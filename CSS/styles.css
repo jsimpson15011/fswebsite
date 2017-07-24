@@ -254,8 +254,8 @@ h2.info-wordbox:link{
 	z-index: 5;
 	border-radius: 50%;
 	width: 1%;
-	height: 1.77%;  
-	left: 50%;
+	height: 1.77%;
+	left: 100px;
 	background-color: black;
 	opacity: .4;
 	bottom:30px;
