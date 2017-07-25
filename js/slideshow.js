@@ -3,9 +3,25 @@ var startTimer = null;
 var timer = setInterval(forward, 6000);
 var leftBox = document.getElementsByClassName('box-left')[0];
 var whiteBox = document.getElementById("whitebox");
+var xmlhttp = new XMLHttpRequest();
 
-addSlidesToPage(2);
-addSlidesToPage(3);
+xmlhttp.onreadystatechange = function() {
+  if (xmlhttp.readyState == XMLHttpRequest.DONE) {
+    if (xmlhttp.status == 200) {
+    var n = (xmlhttp.responseText.match(/jpg/g) || []).length;
+	for (i = 1; i < ((n/2)+1); i++) {
+    addSlidesToPage(i);
+    } 
+  }
+}
+}
+xmlhttp.open("GET", "images/slideshow/", true);
+xmlhttp.send();
+ /* for (var i = 1; i < 4; i++) {
+  	addSlidesToPage(i);
+  } */
+
+  
 function addSlidesToPage(n){
 	var slideShowBox = document.getElementById('whitebox');
 	var newSlide = document.createElement('DIV');
@@ -13,7 +29,7 @@ function addSlidesToPage(n){
 	var mySlides=document.getElementsByClassName('mySlides');
 	var newDot= document.createElement('DIV');
 	var number=n;
-	var imgSrc='images/'+number+'.jpg';
+	var imgSrc='images/slideshow/'+number+'.jpg';
 	newDot.classList.add('dot');
 	newSlide.classList.add('mySlides');
 	newImg.src=imgSrc;
@@ -21,6 +37,7 @@ function addSlidesToPage(n){
 	slideShowBox.insertBefore(newSlide, slideShowBox.children[2]);
 	slideShowBox.insertBefore(newDot, slideShowBox.lastChild);
 	mySlides[0].insertBefore(newImg, mySlides[0].firstChild);
+	$( '.mySlides' ).insertAfter( "#original" );
 }
 
 var rightBox = document.getElementsByClassName('box-right')[0];
@@ -147,6 +164,7 @@ function showSlides(n) {
   for (i = 0; i < dots.length; i++) {
       dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block"; 
+  $(slides[slideIndex-1]).fadeIn(1000);
+  slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
