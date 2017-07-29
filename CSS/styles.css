@@ -3,9 +3,10 @@ h1 {
 	top: 87px;
 	left: 250px;
 	z-index:-0;
-	font-size: 25px;
+	font-size: 30px;
 	color: white;
 	font-family: "Times New Roman", Times, serif;
+	font-weight: 310;
 }
 
 h2 {
@@ -255,7 +256,7 @@ h2.info-wordbox:link{
 	border-radius: 50%;
 	width: 1%;
 	height: 1.77%;
-	left: 100px;
+	left: 40%;
 	background-color: black;
 	opacity: .4;
 	bottom:30px;
@@ -432,6 +433,8 @@ a:hover {
 	margin-bottom: 5px;
 	margin-right: 10px;
 	color: white;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 16pt;
 }
 
 .arrow-left {
@@ -751,6 +754,8 @@ td{
 	line-height:50px;
 	float: right;
 	cursor: pointer;
+	font-family: sans-serif;
+	font-weight: bold;
 }
 #close:hover{
 	width: 50px;
@@ -924,4 +929,12 @@ position: absolute;
 #next-month:hover, #prev-month:hover{
 	opacity: 1;
 	cursor: pointer;
+}
+
+#whitewords{
+	color:white;
+}
+
+.uploadpicture{
+	max-width: 90%;
 }

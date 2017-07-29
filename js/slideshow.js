@@ -1,3 +1,5 @@
+$( '#original' ).ready(function() {
+
 var slideIndex = 1;
 var startTimer = null;
 var timer = setInterval(forward, 6000);
@@ -168,3 +170,5 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
+
+});
