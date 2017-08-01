@@ -4,6 +4,7 @@
 		</script>
 		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 		<title>Fountain Springs Golf Course</title>
+		
 		<div id=logocontainer>
 			<a href="index.html">
 				<img id="logo" src="images/logo.png">
@@ -23,7 +24,7 @@
 					</a></li>
 
 					<li class="buttons centerbuttons" id="golf"><a href="info.html">
-							<img src="images/teetimes.png" onmouseover="this.src='images/teetimeshover.png';" onmouseout="this.src='images/teetimes.png';"/>
+							<img src="images/teetimeshover.png" onmouseover="this.src='images/teetimes.png';" onmouseout="this.src='images/teetimeshover.png';"/>
 						</a>
 						<div id="golf-dropdown">
 							<a href="info.html">
@@ -31,9 +32,9 @@
 							</a>
 
 							<a href="teetimes.html">
-								<p class="dropdown-button">Tee Times</p>
+								<p class="dropdown-button-current">Tee Times</p>
 							</a>
-
+							
 							<a href="membership.html">
 								<p class="dropdown-button">Membership</p>
 							</a>
@@ -72,78 +73,42 @@
 		</div>
 	</head>	
 	<Body>
-
-		<div class="whitebox">
-
-			<div class="arrow-left"></div>
-			<div class="box-left"></div>
-
-			<div class="mySlides fade click">
-			<img src="images/1h.jpg">
-			</div>
-			
-			<div class="mySlides fade click">
-			<img src="images/2h.jpg">
-			</div>
-			
-			<div class="mySlides fade click">
-			<img src="images/3h.jpg">
-			</div>
-
-			<div class="arrow-right"></div>
-			<div class="box-right"></div>
-
-			<div class="dot d"></div>
-			<div class="dot d"></div>
-			<div class="dot d"></div>
-
-		</div>
-		<div class="wordbox">
-			<p class="words">
-			Lorem ipsum dolor sit amet, eam no choro voluptatibus, vis ex omnis recusabo. Eos eu salutandi iudicabit posidonium. Choro habemus perfecto usu te, mundi nostrum ullamcorper an qui, hinc labitur tractatos vim ei. Movet dictas dissentiunt eu vis. Has cu maiorum praesent, malorum 
-			explicari forensibus mei cu. Minimum dissentias sea at, ea eos reque debitis liberavisse.Lorem ipsum dolor sit amet, eam no choro voluptatibus, vis ex omnis recusabo. Eos eu salutandi iudicabit posidonium. Choro habemus perfecto usu te, mundi nostrum ullamcorper an qui, hinc labitur tractatos vim ei. Movet dictas dissentiunt eu vis. Has cu maiorum praesent, malorum 
-			explicari forensibus mei cu. Minimum dissentias sea at, ea eos reque debitis liberavisse.Lorem ipsum dolor sit amet, eam no choro voluptatibus, vis ex omnis recusabo. Eos eu salutandi iudicabit posidonium. Choro habemus perfecto usu te, mundi nostrum ullamcorper an qui, hinc labitur tractatos vim ei. Movet dictas dissentiunt eu vis. Has cu maiorum praesent, malorum 
-			explicari forensibus mei cu. Minimum dissentias sea at, ea eos reque debitis liberavisse.
-			<br><br>
-			<h3>RATES</h3>
-			<ul>
+		<div class="column-wrapper">
+			<div class="teetimes-wordbox">
+				<p class="words">
+				<h2>Course Rates</h2>
+				<ul class="words">
 				<li>9 Hole Round: $20.00</li>
 				<li>9 Hole Cart Rental: $6.00</li>
 				<li>18 Hole Round: $30.00</li>
 				<li>18 Hole Cart Rental: $15.00</li>
-			</ul>
-			</p>
+				</ul>
+				</p>
+			</div>
+			<div class="teetimes-booking">
+				<p class="words">
+					<h2>Book Your Event</h2>
+					<form class='event-forms'action="eventbooking1.php" method="post">
+  						<label for="fname">First Name:</label> <input type="text" name="fname"><br>
+  						<label for="lname">Last Name:</label> <input type="text" name="lname"><br>
+  						<input type="submit" value="Submit">
+  						<p class="intext-link"><a href="lodging.html" target="_blank">Need a Place to Stay?</a></p>
+					</form>
+				</p>
+			</div>
 		</div>
-
-		
-
-		
-
-		
-			
-		<div id="greybox">
-			
-		</div>
-
-				
-				<div class="bottom">
-	
-				</div>
-
+		<div id="Clear"></div>
+		<div id="greybox"></div>
+		<div class="bottom"></div>
 	<footer>
 		<div class="bottomnav">
-				<p></p>
-				<p class="up">(605) 342-GOLF | 1750 Fountain Plaza Drive | Rapid City | South Dakota</p>
-				</div>
+			<p></p>
+			<p class="up">(605) 342-GOLF | 1750 Fountain Plaza Drive | Rapid City | South Dakota<br>
+			<a href="index.html">Home</a> | <a href="teetimes.html">Tee Times</a> | <a href="calendar.html">Calendar</a> | <a href="bookevent.html">Book Event</a>
+			</p>
+		</div>
 	</footer>
-
 		<link href="CSS/styles.css" type="text/css"
 		rel="stylesheet" />
-	<script type="text/javascript" src="js/slideshow.js"></script>
-	
-
-	
-	</Body>
-
-	
+	</Body>	
 </HTML>
