@@ -850,6 +850,10 @@ position: absolute;
 	display: none;
 	float: left;
 }
+.year-name{
+	margin-left: 50px;
+	float: right;
+}
 .month{
 	display: none;
 	position: relative;
@@ -921,6 +925,7 @@ position: absolute;
 	z-index: 1;
 	float: right;
 	margin-top: 5px;
+	margin-left: 60px;
  	width: 0; 
   	height: 0; 
   	border-top: 60px solid transparent;

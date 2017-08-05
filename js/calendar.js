@@ -5,6 +5,12 @@ var next = document.getElementById('next-month');
 var prev = document.getElementById('prev-month');
 var dateCalcArray = [dateCalcWithLeap(6),dateCalcWithLeap(2),dateCalc(3),dateCalc(6),dateCalc(1),dateCalc(4),dateCalc(6),dateCalc(2),dateCalc(5),dateCalc(0),dateCalc(3),dateCalc(5)];
 
+var monthLabelBox=document.getElementsByClassName('month-label')[0];
+var yearLabel = document.createElement('div');
+yearLabel.innerHTML = date.getFullYear();
+yearLabel.classList.add('year-name');
+monthLabelBox.appendChild(yearLabel);
+
 for (var i = 0; i<dateCalcArray[1]; i++) {
 	createBlankBox(1);
 }
