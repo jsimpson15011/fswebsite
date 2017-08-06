@@ -14,9 +14,14 @@ h2 {
 	text-align: center;
 }
 
+h3 {
+	margin-left: 10px;
+}
+
 h2.info-wordbox:link{
 	color: blue;
 }
+
 #whitelines{
 	position: absolute;
 	z-index: -1;
@@ -437,6 +442,9 @@ a:hover {
 	font-size: 16pt;
 }
 
+.centered{
+	text-align: center;
+}
 .arrow-left {
 	position: absolute;
  	width: 0; 
