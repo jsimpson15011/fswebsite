@@ -217,7 +217,7 @@ h2.info-wordbox:link{
 	margin-right: auto;
 	margin-top: 10px;
 	}
-	
+
 	#map{
 	display: block;
 	position: relative;
@@ -553,6 +553,7 @@ p{
 	overflow: none;
 	margin: auto;
 	width: 100%;
+	max-width: 2000px;
 	height: 250px;
 	top: 80%;
 	opacity: .2;
