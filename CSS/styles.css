@@ -114,7 +114,7 @@ h2.info-wordbox:link{
 	#scorecard{
 	display: block;
 	position: relative;
-	width: 1000px;
+	width: 800px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 10px;
@@ -212,12 +212,12 @@ h2.info-wordbox:link{
 	#scorecard{
 	display: block;
 	position: relative;
-	width: 100%;
+	width: 700px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 10px;
 	}
-
+	
 	#map{
 	display: block;
 	position: relative;
