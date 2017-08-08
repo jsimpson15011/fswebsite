@@ -1,6 +1,6 @@
 <?php // login.php
 	$hn = 'localhost';
-	$db = 'publications';
+	$db = 'fountain_springs_golf';
 	$un = 'joeyjoejr';
 	$pw = 'LAMBeKINS1!'
 	?>
