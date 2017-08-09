@@ -1,16 +1,17 @@
-var date = new Date();
-var month = date.getMonth();
-var monthContainer = document.getElementsByClassName('month');
+var date = new Date(); //this date is used to get the current month and the current year
+var month = date.getMonth(); //This is the current month
 var next = document.getElementById('next-month');
 var prev = document.getElementById('prev-month');
-var dateCalcArray = [dateCalcWithLeap(6),dateCalcWithLeap(2),dateCalc(3),dateCalc(6),dateCalc(1),dateCalc(4),dateCalc(6),dateCalc(2),dateCalc(5),dateCalc(0),dateCalc(3),dateCalc(5)];
+var dateCalcArray = [dateCalcWithLeap(6),dateCalcWithLeap(2),dateCalc(3),dateCalc(6),dateCalc(1),dateCalc(4),dateCalc(6),dateCalc(2),dateCalc(5),dateCalc(0),dateCalc(3),dateCalc(5)];//these numbers tell us what day of the week the 1st of the month is in 2017
 
 var monthLabelBox=document.getElementsByClassName('month-label')[0];
+//the following block displays the current year
 var yearLabel = document.createElement('div');
 yearLabel.innerHTML = date.getFullYear();
 yearLabel.classList.add('year-name');
 monthLabelBox.appendChild(yearLabel);
 
+//the following block creates the blank boxes that make the first of the month on the correct day of the week
 for (var i = 0; i<dateCalcArray[1]; i++) {
 	createBlankBox(1);
 }
@@ -61,10 +62,12 @@ function dateCalcWithLeap(n){//Calculates how many date boxes need to be added t
 	}
 	return calc;
 }
+
 function createBlankBox(m){
-	var calBox = document.createElement('DIV');
+	var calBox = document.createElement('DIV');//This is the blank box
+	var monthContainer = document.getElementsByClassName('month');
 	calBox.classList.add('cal-void');
-	monthContainer[m].insertBefore(calBox, monthContainer[m].children[7]);
+	monthContainer[m].insertBefore(calBox, monthContainer[m].children[7]);//children 7 inserts the blank after the day of the week labels
 }
 
 next.addEventListener('click',showNextMonth,false);
