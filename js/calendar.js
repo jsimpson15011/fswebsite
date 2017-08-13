@@ -2,16 +2,43 @@ var date = new Date(); //this date is used to get the current month and the curr
 var month = date.getMonth(); //This is the current month
 var next = document.getElementById('next-month');
 var prev = document.getElementById('prev-month');
-var dateCalcArray = [dateCalcWithLeap(6),dateCalcWithLeap(2),dateCalc(3),dateCalc(6),dateCalc(1),dateCalc(4),dateCalc(6),dateCalc(2),dateCalc(5),dateCalc(0),dateCalc(3),dateCalc(5)];//these numbers tell us what day of the week the 1st of the month is in 2017
+var dateCalcArray = 
+[dateCalcWithLeap(5),dateCalcWithLeap(1),dateCalc(1),dateCalc(4)
+,dateCalc(6),dateCalc(2),dateCalc(4),dateCalc(0),
+dateCalc(3),dateCalc(5),dateCalc(1),dateCalc(3)];//This array runs the date calc function where n is the day of the week of the first of each month in 2010
 
-var monthLabelBox=document.getElementsByClassName('month-label')[0];
 //the following block displays the current year
+var monthLabelBox=document.getElementsByClassName('month-label')[0];
 var yearLabel = document.createElement('div');
 yearLabel.innerHTML = date.getFullYear();
 yearLabel.classList.add('year-name');
 monthLabelBox.appendChild(yearLabel);
 
+function dateCalc(n){//Calculates how many date boxes need to be added to beggining of month. March through December
+	var year = date.getFullYear();
+	var calc = n+(year-2010)+(Math.floor((year-2008)/4));//adds one for every leap year since 2010
+	if(calc>6){
+		for (calc; calc > 6; ) {
+			calc-=7;
+		}
+	}
+	return calc;
+}
+function dateCalcWithLeap(n){//Calculates how many date boxes need to be added to beggining of month. January and Feb.
+	var year = date.getFullYear();
+	var calc = n+(year-2010)+(Math.floor((year-2009)/4));//adds one for every year after leap year since 2010
+	if(calc>6){
+		for (calc; calc > 6; ) {
+			calc-=7;
+		}
+	}
+	return calc;
+}
+
 //the following block creates the blank boxes that make the first of the month on the correct day of the week
+for (var i = 0; i<dateCalcArray[0]; i++) {
+	createBlankBox(0);
+}
 for (var i = 0; i<dateCalcArray[1]; i++) {
 	createBlankBox(1);
 }
@@ -44,23 +71,6 @@ for (var i = 0; i<dateCalcArray[10]; i++) {
 }
 for (var i = 0; i<dateCalcArray[11]; i++) {
 	createBlankBox(11);
-}
-
-function dateCalc(n){//Calculates how many date boxes need to be added to beggining of month
-	var year = date.getFullYear();
-	var calc = n+(year-2017);
-	if(calc>6){
-		calc-=7;
-	}
-	return calc;
-}
-function dateCalcWithLeap(n){//Calculates how many date boxes need to be added to beggining of month
-	var year = date.getFullYear();
-	var calc = (n+1)+(year-2017);
-	if(calc>6){
-		calc -=7 ;
-	}
-	return calc;
 }
 
 function createBlankBox(m){
